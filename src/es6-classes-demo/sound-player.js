@@ -9,5 +9,3 @@ export default class SoundPlayer {
     console.log('Playing sound file ' + fileName);
   }
 }
-
-export {SoundPlayer};
