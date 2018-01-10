@@ -1,5 +1,9 @@
-Repo to illustrate Jest issue with ES6 class imports.
+Repo to illustrate mocking ES6 class imports with Jest.
 
-To repro, clone, `yarn`, `yarn test`.
-File ./src/es6-classes/demo/sound-player-consumer-factory-mock.test.js fails due to the issue.
-File ./src/es6-classes/demo/sound-player-consumer.test.js illustrates the workaround using `mock.mockImplementation()`.
+To demo, clone, `yarn`, `yarn test`.
+
+File ./src/es6-classes/demo/sound-player-consumer-factory-mock.test.js illustrates a working factory mock.
+
+File ./src/es6-classes/demo/sound-player-consumer.test.js illustrates working mocks using `mock.mockImplementation()` and a manual mock.
+
+`video-player.js` is manually mocked.
