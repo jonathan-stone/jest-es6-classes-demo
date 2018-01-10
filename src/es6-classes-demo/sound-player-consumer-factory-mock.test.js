@@ -14,6 +14,11 @@ jest.mock('./sound-player', () => {
   });
 });
 
+beforeEach(() => {
+  SoundPlayer.mockClear();
+  mockPlaySoundFile.mockClear();
+});
+
 // jest.mock('./sound-player', () => {
 //   return function() { // Works but does not provide a way to track constructor calls
 //     return {
@@ -42,6 +47,7 @@ it('The consumer should be able to call new() on SoundPlayer', () => {
 });
 
 it('We can check if the consumer called the class constructor', () => {
+  expect(SoundPlayer).not.toHaveBeenCalled(); // ensure our mockClear() is working
   const soundPlayerConsumer = new SoundPlayerConsumer();
   expect(SoundPlayer).toHaveBeenCalled();
 });
