@@ -8,4 +8,4 @@ File [src/es6-classes-demo/sound-player-consumer-factory-mock.test.js](src/es6-c
 
 File [src/es6-classes-demo/sound-player-consumer.test.js](src/es6-classes-demo/sound-player-consumer.test.js) illustrates working mocks using `mock.mockImplementation()` and a manual mock.
 
-[`video-player.js`](src/es6-classes-demo/video-player.js) is manually mocked in [src/mocks/es6-classes-demo/\__mocks\__](src/mocks/es6-classes-demo/__mocks__).
+[`video-player.js`](src/es6-classes-demo/video-player.js) is manually mocked in [src/mocks/es6-classes-demo/\__mocks\__](src/es6-classes-demo/__mocks__).
