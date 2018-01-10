@@ -14,12 +14,20 @@ SoundPlayer.mockImplementation(() => {
   };
 });
 
+beforeEach(() => {
+  SoundPlayer.mockClear();
+  VideoPlayer.mockClear();
+  mockPlaySoundFile.mockClear();
+  mockPlayVideoFile.mockClear();
+});
+
 it('The consumer should be able to call new() on SoundPlayer', () => {
   const soundPlayerConsumer = new SoundPlayerConsumer();
   expect(soundPlayerConsumer).toBeTruthy(); // Constructor ran with no errors
 });
 
 it('We can check if the consumer called the class constructor', () => {
+  expect(SoundPlayer).not.toHaveBeenCalled(); // ensure our mockClear() is working
   const soundPlayerConsumer = new SoundPlayerConsumer();
   expect(SoundPlayer).toHaveBeenCalled();
   expect(VideoPlayer).toHaveBeenCalled();
